@@ -177,17 +177,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// ===================================
-// PRELOAD DE IMAGENS
-// ===================================
-
-// Precarrega as imagens da galeria para melhor performance no lightbox
-function preloadImages() {
-    images.forEach(image => {
-        const img = new Image();
-        img.src = image.src;
-    });
-}
-
-// Executa o preload após o carregamento da página
-window.addEventListener('load', preloadImages);
